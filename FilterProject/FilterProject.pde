@@ -1,16 +1,5 @@
 /*******************************************
- *                                         * 
- * Image Filter Project starter code       *
- *                                         *
- * UTeach CSP                              *
- * Bradley Beth                            *
- * rev. 20160927                           * 
- *                                         *
- * Search this source code for the phrase  *
- * "complete this section" to locate the   *
- * targeted sections of code you must      *
- * complete.                               *
- *                                         *
+ * Image Filter Project                    *
  *******************************************/
 
 boolean PicLoaded = false;
@@ -152,7 +141,7 @@ void draw()
       while (i < picEnd)
       {
         color c = pixels[i];
-        c = color(blue(c) + 123, green(c) + 123, red(c) + 123);
+        c = color(blue(c) + 123, green(c) + 123, red(c) + 123); //switch the r values with the b values and add 123, add 123 to the g values, and switch the r values with the b values and add 123 
         pixels[i] = c;
         i = i + 1;
         if (i % width >= picWidth)
@@ -166,7 +155,7 @@ void draw()
       while (i < picEnd)
       {
         color c = pixels[i];
-        c = color(0, green(c), 0);
+        c = color(0, green(c), 0); //zero out the r and b values while keeping the g value
         pixels[i] = c;
         i = i + 1;
         if (i % width >= picWidth)
@@ -186,7 +175,7 @@ void draw()
       {
         for (int y = 0; y < picHeight; y++)
         {
-          set(x, y, original[picWidth - x - 1][picHeight - y - 1]);
+          set(x, y, original[picWidth - x - 1][picHeight - y - 1]); //invert every pixel in the image
         }
       }
     }
